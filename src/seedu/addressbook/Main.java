@@ -112,6 +112,9 @@ public class Main {
             storage.save(addressBook);
             return result;
         } catch (Exception e) {
+            if(e.getMessage().contains("Read-Only")){
+                return new CommandResult(e.getMessage());
+            }
             ui.showToUser(e.getMessage());
             throw new RuntimeException(e);
         }
