@@ -59,7 +59,7 @@ public class Address {
         address+=block+SPLIT_TOKEN;
         address+=street+SPLIT_TOKEN;
         address+=unit+SPLIT_TOKEN;
-        address+=postalCode+SPLIT_TOKEN;
+        address+=postalCode;
 
         return address;
     }
