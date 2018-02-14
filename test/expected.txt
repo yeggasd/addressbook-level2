@@ -212,7 +212,7 @@
 || 
 || 0 persons listed!
 || ===================================================
-|| Enter command: || [Command entered:  find betsy]
+|| Enter command: || [Command entered:  Find betsy]
 || 	1. Betsy Choo Tags: [secretive]
 || 
 || 1 persons listed!
