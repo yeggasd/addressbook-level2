@@ -59,7 +59,7 @@
 # test sort command
 ##########################################################
 
-  # should be sorted after
+  # should be correctly sorted
   sort
   list
 
