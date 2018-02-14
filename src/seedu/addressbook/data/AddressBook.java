@@ -108,6 +108,13 @@ public class AddressBook {
     }
 
     /**
+     * Sorts the address book according to their name.
+     */
+    public void sortByName() {
+        allPersons.sortByName();
+    }
+
+    /**
      * Returns a new UniquePersonList of all persons in the address book at the time of the call.
      */
     public UniquePersonList getAllPersons() {

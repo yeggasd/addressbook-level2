@@ -129,6 +129,13 @@ public class UniquePersonList implements Iterable<Person> {
         internalList.clear();
     }
 
+    /**
+     * Sorts all persons according to their name.
+     */
+    public void sortByName() {
+        Collections.sort(internalList);
+    }
+
     @Override
     public Iterator<Person> iterator() {
         return internalList.iterator();
