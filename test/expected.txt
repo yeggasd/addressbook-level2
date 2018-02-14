@@ -25,7 +25,7 @@
 || viewall: Views the non-private details of the person identified by the index number in the last shown person listing.
 || Parameters: INDEX
 || Example: viewall 1
-|| sort: Sorts the people according to their name
+|| sort: Sorts the people according to their name in lexicographical order
 || Example: sort
 || help: Shows program usage instructions.
 || Example: help
@@ -141,7 +141,7 @@
 || This person already exists in the address book
 || ===================================================
 || Enter command: || [Command entered:  sort]
-|| Address book sorted.
+|| Address book sorted by the lexicographical order.
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
