@@ -49,14 +49,24 @@ public class Formatter {
     protected boolean isCommentLine(String rawInputLine) {
         return rawInputLine.trim().matches(COMMENT_LINE_FORMAT_REGEX);
     }
-
+    /**
+     * Returns the formatted Request message.
+     */
     public String getUserRequestInputString(){
         return new String(LINE_PREFIX + "Enter command: ");
     }
+
+    /**
+     * Returns the input string given.
+     *
+     */
     public String getRequestStringRepeated(String fullInputLine){
         return formatMessage("[Command entered:" + fullInputLine + "]");
     }
 
+    /**
+     * Returns the formatted welcome message.
+     */
     public String getWelcomeMessage(String storageFilePath, String version ){
         String storageFileInfo = String.format(MESSAGE_USING_STORAGE_FILE, storageFilePath);
         return formatMessage(DIVIDER,
@@ -67,15 +77,32 @@ public class Formatter {
                 storageFileInfo,
                 DIVIDER);
     }
+
+    /**
+     * Returns the formatted Goodbye message.
+     */
     public String getGoodbyeMessage(){
         return formatMessage(MESSAGE_GOODBYE, DIVIDER, DIVIDER);
     }
+
+    /**
+     * Returns the formatted Failure message.
+     */
     public String getInitFailedMessage(){
         return formatMessage(MESSAGE_INIT_FAILED, DIVIDER, DIVIDER);
     }
+
+    /**
+     * Returns the formatted Result message.
+     */
     public String getResultMessage(CommandResult result){
         return formatMessage(result.feedbackToUser, DIVIDER);
     }
+
+    /**
+     * Formats a list of persons as an index list
+     * Private contact detail are hidden.
+     */
     public List<String> formatPersons(List<? extends ReadOnlyPerson> persons){
         final List<String> formattedPersons = new ArrayList<>();
         for (ReadOnlyPerson person : persons) {
@@ -83,6 +110,7 @@ public class Formatter {
         }
         return formattedPersons;
     }
+
     /** Formats a list of strings as a viewable indexed list. */
     public String getIndexedListForViewing(List<String> listItems) {
         final StringBuilder formatted = new StringBuilder();
@@ -102,6 +130,10 @@ public class Formatter {
     public String getIndexedListItem(int visibleIndex, String listItem) {
         return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);
     }
+
+    /**
+     * Formats given string by adding Line prefixes and line breaks.
+     */
     public String formatMessage(String... message){
         final StringBuilder sb = new StringBuilder();
         for (String m : message) {
