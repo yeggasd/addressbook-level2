@@ -110,6 +110,10 @@ Examples:
 * `find Betsy`<br> 
   `viewall 1`<br>
   Views all details of the 1st person in the results of the `find` command.
+  
+### Sorting all entries : `sort`
+Sorts the entries from the address book according to their name.<br>
+Format: `sort`  
 
 ### Clearing all entries : `clear`
 Clears all entries from the address book.<br>
